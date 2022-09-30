@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+        Solid State by HTML5 UP
+        html5up.net | @ajlkn
+        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+        <head>
+                <title>Area 51</title>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                <link rel="stylesheet" href="/static/assets/css/main.css" />
+                <noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+        </head>
+        <body class="is-preload">
+
+                <!-- Page Wrapper -->
+                        <div id="page-wrapper">
+
+                                <!-- Header -->
+                                        <header id="header" class="alt">
+                                                <h1><a href="index.html">Solid State</a></h1>
+                                                <nav>
+                                                        <a href="#menu">Menu</a>
+                                                </nav>
+                                        </header>
+
+                                <!-- Menu -->
+                                        <nav id="menu">
+                                                <div class="inner">
+                                                        <h2>Menu</h2>
+                                                        <ul class="links">
+                                                                <li><a href="/templates/index.html">Home</a></li>
+                                                                <li><a href="/templates/generic.html">Generic</a></li>
+                                                                <li><a href="/templates/elements.html">Elements</a></li>
+                                                                <!-- <li><a href="#">Log In</a></li>
+                                                                <li><a href="#">Sign Up</a></li> -->
+                                                        </ul>
+                                                        <a href="#" class="close">Close</a>
+                                                </div>
+                                        </nav>
+
+                                <!-- Banner -->
+                                        <section id="banner">
+                                                <div class="inner">
+                                                        <div class="logo"><span class="icon brands fa-reddit-alien"></span></div>
+                                                        <h2>Welcome to Area51</h2>
+                                                        <p>Get the latest information about aliens and sus stuff</p>
+                                                </div>
+                                        </section>
+
+                                <!-- Wrapper -->
+                                        <section id="wrapper">
+
+                                                <!-- One -->
+
+                                                <!-- Four -->
+                                                        <section id="four" class="wrapper alt style1">
+                                                                <div class="inner">
+                                                                        <h2 class="major">Latest News</h2>
+                                                                        <a href="/newsletter" class="special">Sign Up for Newsletter Here!</a>
+                                                                        <!-- <p href="/newsletter">Click here to sign up for the newsletter!</p> -->
+                                                                        <section class="features">
+                                                                                <article>
+                                                                                        <a class="image"><img src="{{ data['data']['children'][0]['data']['thumbnail'] }}" alt="" /></a>
+                                                                                        <h3 class="major">{{ data['data']['children'][0]['data']['title'] }}</h3>
+                                                                                        <p style="word-wrap: break-word;">{{ data['data']['children'][0]['data']['selftext'] }}</p>
+                                                                                        <a href="{{ data['data']['children'][0]['data']['url'] }}" class="special">Learn more</a>
+                                                                                </article>
+                                                                                {% block mainPost %}
+                                                                                        {% for i in range(2, 31) %}
+                                                                                <article>
+                                                                                        <a class="image"><img src="{{ data['data']['children'][i]['data']['thumbnail'] }}" alt="" /></a>
+                                                                                        <h3 class="major">{{ data['data']['children'][i]['data']['title'] }}</h3>
+                                                                                        <p style="word-wrap: break-word;">{{ data['data']['children'][i]['data']['selftext'] }}</p>
+                                                                                        <a href="{{ data['data']['children'][i]['data']['url'] }}" class="special">Learn more</a>
+                                                                                </article>
+                                                                                        {% endfor %}
+                                                                                {% endblock mainPost %}
+                                                                        </section>
+                                                                        <ul class="actions">
+                                                                                <li><a href="#" class="button">Browse All</a></li>
+                                                                        </ul>
+                                                                </div>
+                                                        </section>
+
+                                        </section>
+
+                                <!-- Footer -->
+                                        <section id="footer">
+                                                <div class="inner">
+                                                        <ul class="copyright">
+                                                                <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                                                        </ul>
+                                                </div>
+                                        </section>
+
+                        </div>
+
+                <!-- Scripts -->
+                        <script src="/static/assets/js/jquery.min.js"></script>
+                        <script src="/static/assets/js/jquery.scrollex.min.js"></script>
+                        <script src="/static/assets/js/browser.min.js"></script>
+                        <script src="/static/assets/js/breakpoints.min.js"></script>
+                        <script src="/static/assets/js/util.js"></script>
+                        <script src="/static/assets/js/main.js"></script>
+
+        </body>
